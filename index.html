@@ -1039,6 +1039,27 @@
       letter-spacing: .08em;
     }
 
+    .footer-mobile-divider {
+      display: none;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0 20px;
+      width: 100%;
+    }
+    .f-divider-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, .1);
+    }
+    .f-divider-text {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .24em;
+      color: rgba(255, 255, 255, .25);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
     /* ─── FOOTER FORM ─── */
     .footer-body {
       display: grid;
@@ -1601,7 +1622,8 @@
       /* Specific Footer Reordering */
       .footer-text-col { order: 1; }
       .footer-form-col { order: 2; }
-      .footer-action-btns { order: 3; }
+      .footer-mobile-divider { display: flex !important; order: 3; }
+      .footer-action-btns { order: 4; }
     }
   </style>
 </head>
@@ -2085,6 +2107,13 @@
           ✦ Message received!<br />
           <span style="font-size:12px; color:rgba(255,255,255,.35);">Yusuf will get back to you within 24 hours.</span>
         </div>
+      </div>
+
+      <!-- Divider for mobile separating form from quick contact -->
+      <div class="footer-mobile-divider">
+        <span class="f-divider-line"></span>
+        <span class="f-divider-text">OR REACH OUT DIRECTLY</span>
+        <span class="f-divider-line"></span>
       </div>
 
       <!-- BUTTONS: can be placed below text on desktop via grid-area, and below form on mobile via auto order -->
