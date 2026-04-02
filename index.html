@@ -478,6 +478,47 @@
       padding: 96px var(--pad);
     }
 
+    /* ─── HERO TICKER ─── */
+    .hero-ticker-wrap {
+      background: var(--accent);
+      padding: 14px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid var(--black);
+    }
+
+    .hero-ticker-track {
+      display: flex;
+      gap: 24px;
+      padding-right: 24px;
+      animation: ticker-fast 12s linear infinite;
+    }
+
+    .hero-ticker-item {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      letter-spacing: .15em;
+      font-weight: 600;
+      color: #000;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .t-dot {
+      font-weight: 300;
+      opacity: 0.6;
+    }
+
+    @keyframes ticker-fast {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     /* ─── SECTION HEADER ─── */
     .sec-hd {
       display: grid;
@@ -1488,6 +1529,34 @@
       <div class="stat">
         <span class="stat-lbl">Based In</span>
         <span class="stat-val" style="font-size:22px;">Lucknow<small>, India</small></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HERO TICKER ─── -->
+  <div class="hero-ticker-wrap">
+    <div class="hero-ticker-track">
+      <div class="hero-ticker-item">
+        <span>PERFORMANCE MAX</span> <span class="t-dot">+</span>
+        <span>DEMAND GEN</span> <span class="t-dot">+</span>
+        <span>SHOPPING</span> <span class="t-dot">+</span>
+        <span>GA4 ANALYTICS</span> <span class="t-dot">+</span>
+        <span>REMARKETING</span> <span class="t-dot">+</span>
+        <span>MEDIA PLANNING</span> <span class="t-dot">+</span>
+        <span>ROAS OPTIMIZATION</span> <span class="t-dot">+</span>
+        <span>GTM</span> <span class="t-dot">+</span>
+        <span>CONVERSION TRACKING</span> <span class="t-dot">+</span>
+      </div>
+      <div class="hero-ticker-item">
+        <span>PERFORMANCE MAX</span> <span class="t-dot">+</span>
+        <span>DEMAND GEN</span> <span class="t-dot">+</span>
+        <span>SHOPPING</span> <span class="t-dot">+</span>
+        <span>GA4 ANALYTICS</span> <span class="t-dot">+</span>
+        <span>REMARKETING</span> <span class="t-dot">+</span>
+        <span>MEDIA PLANNING</span> <span class="t-dot">+</span>
+        <span>ROAS OPTIMIZATION</span> <span class="t-dot">+</span>
+        <span>GTM</span> <span class="t-dot">+</span>
+        <span>CONVERSION TRACKING</span> <span class="t-dot">+</span>
       </div>
     </div>
   </div>
