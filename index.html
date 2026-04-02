@@ -291,7 +291,8 @@
 
     /* ─── HERO  — white bg ─── */
     .hero {
-      background: var(--white);
+      background: color-mix(in srgb, var(--white) 85%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       min-height: 100vh;
       padding: 130px var(--pad) 80px;
       display: grid;
@@ -466,31 +467,74 @@
       color: var(--mid);
     }
 
+    /* ─── AMBIENT LIQUID BG ─── */
+    .ambient-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+      background: transparent;
+    }
+    
+    .blob {
+      position: absolute;
+      filter: blur(90px);
+      opacity: 0.35;
+      border-radius: 50%;
+      animation: float-blob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .blob-1 {
+      width: 45vw; height: 45vw;
+      background: var(--accent);
+      top: -10vw; right: -10vw;
+    }
+    
+    .blob-2 {
+      width: 50vw; height: 50vw;
+      background: #e6a751;
+      bottom: -15vw; left: -10vw;
+      animation-delay: -5s;
+      animation-duration: 25s;
+    }
+    
+    @keyframes float-blob {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-10vw, 20vh) scale(1.1); }
+      100% { transform: translate(15vw, -10vh) scale(0.9); }
+    }
+
     /* ─── SECTION SHELL ─── */
     /* Each section gets its OWN background so they never blend */
 
     .sec-work {
-      background: var(--cream);
+      background: color-mix(in srgb, var(--cream) 88%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 3px solid var(--black);
     }
 
     .sec-skills {
-      background: var(--dark);
+      background: color-mix(in srgb, var(--dark) 92%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 3px solid var(--dark);
     }
 
     .sec-cert {
-      background: var(--white);
+      background: color-mix(in srgb, var(--white) 88%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 3px solid var(--black);
     }
 
     .sec-edu {
-      background: var(--cream);
+      background: color-mix(in srgb, var(--cream) 88%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 3px solid var(--black);
     }
 
     .sec-footer {
-      background: var(--black);
+      background: color-mix(in srgb, var(--black) 95%, transparent);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     }
 
     section {
@@ -734,13 +778,35 @@
     }
 
     .sk-card {
-      background: #221f1a;
+      background: color-mix(in srgb, #221f1a 60%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       padding: 34px 28px;
-      transition: background .25s;
+      transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .sk-card::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 60%);
+      transform: rotate(30deg) translateY(100%);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      pointer-events: none;
     }
 
     .sk-card:hover {
-      background: #2e2a23;
+      background: color-mix(in srgb, #2e2a23 70%, transparent);
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .sk-card:hover::after {
+      transform: rotate(30deg) translateY(-100%);
     }
 
     .sk-n {
@@ -768,16 +834,37 @@
     }
 
     .cert-card {
-      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--white) 60%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.06);
       padding: 52px;
       display: flex;
       align-items: flex-start;
       gap: 40px;
-      transition: border-color .3s;
+      transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-card::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 60%);
+      transform: rotate(30deg) translateY(100%);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      pointer-events: none;
     }
 
     .cert-card:hover {
       border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      z-index: 1;
+    }
+    
+    .cert-card:hover::after {
+      transform: rotate(30deg) translateY(-100%);
     }
 
     .cert-icon {
@@ -1292,14 +1379,35 @@
     }
 
     .client-card {
+      background: color-mix(in srgb, var(--white) 60%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
       padding: 28px 24px;
-      transition: background .2s;
+      transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .client-card::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 60%);
+      transform: rotate(30deg) translateY(100%);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      pointer-events: none;
     }
 
     .client-card:hover {
-      background: var(--cream);
+      background: color-mix(in srgb, var(--cream) 80%, transparent);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      z-index: 1;
+    }
+
+    .client-card:hover::after {
+      transform: rotate(30deg) translateY(-100%);
     }
 
     .client-card a {
@@ -1476,6 +1584,11 @@
 </head>
 
 <body>
+
+  <div class="ambient-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
 
   <!-- NAV -->
   <nav>
