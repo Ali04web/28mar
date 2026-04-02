@@ -63,9 +63,11 @@
       background: #0a0a0a;
     }
     body.dark-mode .floating-nav {
-      background: rgba(17, 16, 16, 0.65);
-      border-color: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+      background: rgba(17, 16, 16, 0.25);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
     }
     body.dark-mode .f-nav-links a,
     body.dark-mode .f-nav-icon {
@@ -107,6 +109,42 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 19px;
       font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .beeper {
+      position: relative;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+    }
+
+    .beeper::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: #22c55e;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(3.5);
+        opacity: 0;
+      }
     }
 
     .nav-links {
@@ -163,13 +201,13 @@
       left: 50%;
       transform: translateX(-50%) translateY(0);
       z-index: 1000;
-      background: rgba(250, 250, 248, 0.65);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: rgba(250, 250, 248, 0.25);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      border: 1px solid rgba(0, 0, 0, 0.05);
       border-radius: 50px;
       padding: 6px 12px;
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
       display: none; /* only available in mobile */
       justify-content: center;
       align-items: center;
@@ -1331,7 +1369,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">Available for Work</div>
+    <div class="nav-logo"><span class="beeper"></span>Available for Work</div>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#skills">Skills</a></li>
