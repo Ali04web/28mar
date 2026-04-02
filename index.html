@@ -598,12 +598,51 @@
     }
 
     /* ─── EXPERIENCE ─── */
+    .exp-timeline-wrap {
+      position: relative;
+      margin-left: 10px;
+      padding-left: 45px;
+    }
+
+    .exp-line {
+      position: absolute;
+      left: 0;
+      top: 53px;
+      bottom: 0;
+      width: 1px;
+      background: var(--accent);
+      transform-origin: top;
+      transform: scaleY(0);
+    }
+
+    .exp-line.in {
+      transform: scaleY(1);
+      transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
     .exp-item {
       display: grid;
       grid-template-columns: 200px 1fr;
       gap: 60px;
       padding: 48px 0;
-      border-top: 1px solid var(--line);
+      position: relative;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -49px;
+      top: 49px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      transform: scale(0);
+    }
+
+    .exp-item.in::before {
+      transform: scale(1);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.5s;
     }
 
     .exp-when {
@@ -1573,57 +1612,61 @@
       <h2 class="sec-title">Selected<br /><em>Experience</em></h2>
     </div>
 
-    <div class="exp-item reveal">
-      <div>
-        <div class="exp-when">Nov 2024 — Present</div>
-        <div class="exp-co">ShoppingIQ</div>
-        <div class="exp-loc">Remote · London, UK</div>
+    <div class="exp-timeline-wrap">
+      <div class="exp-line reveal"></div>
+      
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-when">Nov 2024 — Present</div>
+          <div class="exp-co">ShoppingIQ</div>
+          <div class="exp-loc">Remote · London, UK</div>
+        </div>
+        <div>
+          <div class="exp-role">E-Commerce Executive</div>
+          <ul class="exp-pts">
+            <li>Managed campaigns across <strong>Meta and Google Ads</strong> — targeting, tracking, objective alignment.
+            </li>
+            <li>Drove continuous growth through <strong>Search, PMax, and Shopping</strong> campaign optimisation.</li>
+            <li>Conducted keyword research and wrote ad copies that lifted <strong>CTR and conversion rates</strong>.</li>
+            <li>Daily monitoring of <strong>Google Ads and Merchant Center</strong> — resolved issues before they cost
+              money.</li>
+            <li>Delivered weekly and monthly performance reports with clear, actionable insights.</li>
+            <li>Resolved GMC product disapprovals to maintain uninterrupted campaign delivery.</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div class="exp-role">E-Commerce Executive</div>
-        <ul class="exp-pts">
-          <li>Managed campaigns across <strong>Meta and Google Ads</strong> — targeting, tracking, objective alignment.
-          </li>
-          <li>Drove continuous growth through <strong>Search, PMax, and Shopping</strong> campaign optimisation.</li>
-          <li>Conducted keyword research and wrote ad copies that lifted <strong>CTR and conversion rates</strong>.</li>
-          <li>Daily monitoring of <strong>Google Ads and Merchant Center</strong> — resolved issues before they cost
-            money.</li>
-          <li>Delivered weekly and monthly performance reports with clear, actionable insights.</li>
-          <li>Resolved GMC product disapprovals to maintain uninterrupted campaign delivery.</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="exp-item reveal">
-      <div>
-        <div class="exp-when">Sep — Nov 2024</div>
-        <div class="exp-co">Launchigo</div>
-        <div class="exp-loc">Lucknow, India</div>
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-when">Sep — Nov 2024</div>
+          <div class="exp-co">Launchigo</div>
+          <div class="exp-loc">Lucknow, India</div>
+        </div>
+        <div>
+          <div class="exp-role">Facebook Ads Intern</div>
+          <ul class="exp-pts">
+            <li>Ran Meta ad campaigns; mined the <strong>Facebook Ads Library</strong> to reverse-engineer competitor
+              creatives.</li>
+            <li>Managed daily content across <strong>6 Instagram</strong> and <strong>2 Pinterest accounts</strong>.</li>
+            <li>Assisted with Shopify product uploads — descriptions, pricing, imagery.</li>
+            <li>Handled a <strong>YouTube channel</strong> — content scheduling and audience engagement.</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div class="exp-role">Facebook Ads Intern</div>
-        <ul class="exp-pts">
-          <li>Ran Meta ad campaigns; mined the <strong>Facebook Ads Library</strong> to reverse-engineer competitor
-            creatives.</li>
-          <li>Managed daily content across <strong>6 Instagram</strong> and <strong>2 Pinterest accounts</strong>.</li>
-          <li>Assisted with Shopify product uploads — descriptions, pricing, imagery.</li>
-          <li>Handled a <strong>YouTube channel</strong> — content scheduling and audience engagement.</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="exp-item reveal">
-      <div>
-        <div class="exp-when">Jul — Sep 2024</div>
-        <div class="exp-co">Digipodium</div>
-        <div class="exp-loc">Lucknow, India</div>
-      </div>
-      <div>
-        <div class="exp-role">Google Ads Intern</div>
-        <ul class="exp-pts">
-          <li>Wrote targeted ad copy matching message to audience intent across multiple campaigns.</li>
-          <li>Gained hands-on experience with <strong>Search, Display, and Video</strong> formats.</li>
-        </ul>
+      <div class="exp-item reveal">
+        <div>
+          <div class="exp-when">Jul — Sep 2024</div>
+          <div class="exp-co">Digipodium</div>
+          <div class="exp-loc">Lucknow, India</div>
+        </div>
+        <div>
+          <div class="exp-role">Google Ads Intern</div>
+          <ul class="exp-pts">
+            <li>Wrote targeted ad copy matching message to audience intent across multiple campaigns.</li>
+            <li>Gained hands-on experience with <strong>Search, Display, and Video</strong> formats.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
