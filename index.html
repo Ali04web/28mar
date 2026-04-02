@@ -1114,7 +1114,7 @@
       display: flex;
       gap: 0;
       width: max-content;
-      animation: ticker 28s linear infinite;
+      animation: ticker 12s linear infinite;
     }
 
     .clients-track:hover {
@@ -1675,122 +1675,28 @@
     </div>
 
     <!-- scrolling ticker -->
-    <div class="clients-ticker-wrap">
+    <div class="clients-ticker-wrap" style="padding-bottom: 96px;">
       <div class="clients-track">
-        <!-- first set -->
-        <div class="client-item"><a href="https://www.cardfactory.co.uk/" target="_blank"><span
-              class="client-num">01</span><span class="client-name">Card Factory</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.barbequesgalore.com.au/" target="_blank"><span
-              class="client-num">02</span><span class="client-name">Barbeques Galore</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.harbourlifestyle.co.uk/" target="_blank"><span
-              class="client-num">03</span><span class="client-name">Harbour</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://goodlifeletter.com/" target="_blank"><span
-              class="client-num">04</span><span class="client-name">Good Life Letter</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://lounge.com/" target="_blank"><span class="client-num">05</span><span
-              class="client-name">Lounge</span><span class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://pharmaciedesrochettes.fr/" target="_blank"><span
-              class="client-num">06</span><span class="client-name">Les Rochettes</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://glamglobal.co.uk/" target="_blank"><span
-              class="client-num">07</span><span class="client-name">Glam Global</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://rabaya.com/" target="_blank"><span class="client-num">08</span><span
-              class="client-name">Rabaya</span><span class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.thediamondstore.co.uk/" target="_blank"><span
-              class="client-num">09</span><span class="client-name">The Diamond Store</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.silkelondon.com/" target="_blank"><span
-              class="client-num">10</span><span class="client-name">Silke London</span><span
-              class="client-arrow">↗</span></a></div>
-        <!-- duplicate for seamless loop -->
-        <div class="client-item"><a href="https://www.cardfactory.co.uk/" target="_blank"><span
-              class="client-num">01</span><span class="client-name">Card Factory</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.barbequesgalore.com.au/" target="_blank"><span
-              class="client-num">02</span><span class="client-name">Barbeques Galore</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.harbourlifestyle.co.uk/" target="_blank"><span
-              class="client-num">03</span><span class="client-name">Harbour</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://goodlifeletter.com/" target="_blank"><span
-              class="client-num">04</span><span class="client-name">Good Life Letter</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://lounge.com/" target="_blank"><span class="client-num">05</span><span
-              class="client-name">Lounge</span><span class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://pharmaciedesrochettes.fr/" target="_blank"><span
-              class="client-num">06</span><span class="client-name">Les Rochettes</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://glamglobal.co.uk/" target="_blank"><span
-              class="client-num">07</span><span class="client-name">Glam Global</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://rabaya.com/" target="_blank"><span class="client-num">08</span><span
-              class="client-name">Rabaya</span><span class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.thediamondstore.co.uk/" target="_blank"><span
-              class="client-num">09</span><span class="client-name">The Diamond Store</span><span
-              class="client-arrow">↗</span></a></div>
-        <div class="client-item"><a href="https://www.silkelondon.com/" target="_blank"><span
-              class="client-num">10</span><span class="client-name">Silke London</span><span
-              class="client-arrow">↗</span></a></div>
-      </div>
-    </div>
-
-    <!-- full grid -->
-    <div style="padding: 0 var(--pad) 96px;">
-      <div class="clients-grid reveal">
-        <div class="client-card"><a href="https://www.cardfactory.co.uk/" target="_blank">
-            <div class="cc-num">01</div>
-            <div class="cc-name">Card Factory</div>
-            <div class="cc-url">cardfactory.co.uk</div>
-          </a></div>
-        <div class="client-card"><a href="https://www.barbequesgalore.com.au/" target="_blank">
-            <div class="cc-num">02</div>
-            <div class="cc-name">Barbeques Galore</div>
-            <div class="cc-url">barbequesgalore.com.au</div>
-          </a></div>
-        <div class="client-card"><a href="https://www.harbourlifestyle.co.uk/" target="_blank">
-            <div class="cc-num">03</div>
-            <div class="cc-name">Harbour</div>
-            <div class="cc-url">harbourlifestyle.co.uk</div>
-          </a></div>
-        <div class="client-card"><a href="https://goodlifeletter.com/" target="_blank">
-            <div class="cc-num">04</div>
-            <div class="cc-name">Good Life Letter</div>
-            <div class="cc-url">goodlifeletter.com</div>
-          </a></div>
-        <div class="client-card"><a href="https://lounge.com/" target="_blank">
-            <div class="cc-num">05</div>
-            <div class="cc-name">Lounge</div>
-            <div class="cc-url">lounge.com</div>
-          </a></div>
-        <div class="client-card"><a href="https://pharmaciedesrochettes.fr/" target="_blank">
-            <div class="cc-num">06</div>
-            <div class="cc-name">Les Rochettes</div>
-            <div class="cc-url">pharmaciedesrochettes.fr</div>
-          </a></div>
-        <div class="client-card"><a href="https://glamglobal.co.uk/" target="_blank">
-            <div class="cc-num">07</div>
-            <div class="cc-name">Glam Global</div>
-            <div class="cc-url">glamglobal.co.uk</div>
-          </a></div>
-        <div class="client-card"><a href="https://rabaya.com/" target="_blank">
-            <div class="cc-num">08</div>
-            <div class="cc-name">Rabaya</div>
-            <div class="cc-url">rabaya.com</div>
-          </a></div>
-        <div class="client-card"><a href="https://www.thediamondstore.co.uk/" target="_blank">
-            <div class="cc-num">09</div>
-            <div class="cc-name">The Diamond Store</div>
-            <div class="cc-url">thediamondstore.co.uk</div>
-          </a></div>
-        <div class="client-card"><a href="https://www.silkelondon.com/" target="_blank">
-            <div class="cc-num">10</div>
-            <div class="cc-name">Silke London</div>
-            <div class="cc-url">silkelondon.com</div>
-          </a></div>
+        <!-- 1 -->
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇬🇧</span><span class="client-name">United Kingdom</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇺🇸</span><span class="client-name">United States</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇮🇳</span><span class="client-name">India</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇦🇪</span><span class="client-name">UAE</span></div></div>
+        <!-- 2 -->
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇬🇧</span><span class="client-name">United Kingdom</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇺🇸</span><span class="client-name">United States</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇮🇳</span><span class="client-name">India</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇦🇪</span><span class="client-name">UAE</span></div></div>
+        <!-- 3 -->
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇬🇧</span><span class="client-name">United Kingdom</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇺🇸</span><span class="client-name">United States</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇮🇳</span><span class="client-name">India</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇦🇪</span><span class="client-name">UAE</span></div></div>
+        <!-- 4 -->
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇬🇧</span><span class="client-name">United Kingdom</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇺🇸</span><span class="client-name">United States</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇮🇳</span><span class="client-name">India</span></div></div>
+        <div class="client-item"><div style="display:flex; align-items:center; gap:12px; color:var(--black);"><span class="client-num" style="font-size:16px; margin-top:-2px;">🇦🇪</span><span class="client-name">UAE</span></div></div>
       </div>
     </div>
   </section>
