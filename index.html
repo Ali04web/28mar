@@ -1390,7 +1390,11 @@
         text-align: center;
       }
       .sec-hd { margin-bottom: 40px; }
+      
+      .exp-timeline-wrap { margin-left: 0; padding-left: 18px; }
+      .exp-line { top: 32px; left: -1px; }
       .exp-item { padding: 32px 0; text-align: left; }
+      .exp-item::before { left: -22.5px; top: 32px; }
       .exp-role { font-size: 22px; margin-top: 10px; }
       
       .exp-pts, .exp-pts li { 
@@ -1399,12 +1403,13 @@
       .exp-pts li { padding-left: 20px; margin-bottom: 12px; }
 
       .skills-grid, .clients-grid { 
-        grid-template-columns: 1fr !important; 
-        display: block !important; 
-        padding: 0 var(--pad); /* Spacing to prevent touching boundaries */
+        display: grid !important; 
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 0;
       }
-      .sk-card, .client-card { border-bottom: 1px solid rgba(0,0,0,0.1); }
-      .sec-skills .sk-card { border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .sk-card, .client-card { border-bottom: 1px solid rgba(0,0,0,0.1); border-right: 1px solid rgba(0,0,0,0.1); }
+      .sk-card:nth-child(2n), .client-card:nth-child(2n) { border-right: none !important; }
+      .sec-skills .sk-card { border-color: rgba(255,255,255,0.05); }
 
       .cert-card { 
         padding: 32px 24px; text-align: center; 
@@ -1414,13 +1419,17 @@
       .cert-icon { padding-top: 0; justify-content: center; display: flex; }
       .pills { justify-content: center; }
 
+      .hero-ticker-track { gap: 16px; padding-right: 16px; }
+      .hero-ticker-item { gap: 16px; font-size: 10px; }
+
       .clients-ticker-wrap { 
         display: block !important; 
         margin: 0 calc(-1 * var(--pad));
         overflow: hidden;
       }
       .clients-grid { margin-top: 32px !important; }
-      .client-card { padding: 32px 20px; text-align: center; border-right: none !important; }
+      .client-card { padding: 32px 16px; text-align: center; border-right: 1px solid rgba(0,0,0,0.1) !important; }
+      .client-card:nth-child(2n) { border-right: none !important; }
       .client-card a { align-items: center; }
       
       .edu-row { 
