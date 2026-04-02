@@ -555,11 +555,10 @@
 
     .hero-ticker-track {
       display: flex;
-      gap: 24px;
-      padding-right: 24px;
+      gap: 0;
       width: max-content;
       max-width: none;
-      animation: ticker-fast 12s linear infinite;
+      animation: ticker-fast 14s linear infinite;
     }
 
     .hero-ticker-item {
@@ -572,6 +571,7 @@
       display: inline-flex;
       align-items: center;
       gap: 24px;
+      padding-right: 24px;
       flex-shrink: 0;
     }
 
@@ -1308,7 +1308,7 @@
       display: flex;
       gap: 0;
       width: max-content;
-      animation: ticker 12s linear infinite;
+      animation: ticker 25s linear infinite;
     }
 
     .clients-track:hover {
@@ -1554,8 +1554,8 @@
       .cert-icon { padding-top: 0; justify-content: center; display: flex; }
       .pills { justify-content: center; }
 
-      .hero-ticker-track { gap: 32px; padding-right: 32px; }
-      .hero-ticker-item { gap: 32px; font-size: 11px; }
+      .hero-ticker-track { gap: 0; padding-right: 0; }
+      .hero-ticker-item { gap: 32px; padding-right: 32px; font-size: 11px; }
 
       .clients-ticker-wrap { 
         display: block !important; 
