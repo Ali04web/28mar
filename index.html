@@ -1046,6 +1046,54 @@
       line-height: 1.7;
     }
 
+    .footer-stack-wrap {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 32px 0 12px;
+      margin-top: 60px;
+    }
+
+    .footer-stack-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .15em;
+      color: #c4862e;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .footer-stack-items {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .f-stack-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      letter-spacing: .12em;
+      color: rgba(255, 255, 255, .4);
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .f-stack-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .f-stack-dot {
+      color: #c4862e;
+      font-size: 14px;
+      line-height: 1;
+      opacity: 0.6;
+    }
+
     .footer-bot {
       display: flex;
       justify-content: space-between;
@@ -1851,7 +1899,33 @@
 
     </div>
 
-    <div class="footer-bot">
+    <!-- STACK -->
+    <div class="footer-stack-wrap reveal">
+       <div class="footer-stack-label">STACK</div>
+       <div class="footer-stack-items">
+         <div class="f-stack-item">
+           <span class="f-stack-icon" style="width:18px; height:18px; border-radius:3px;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" style="width:11px;"></span>
+           GOOGLE ADS
+         </div>
+         <div class="f-stack-dot">•</div>
+         <div class="f-stack-item">
+           <img src="https://cdn.simpleicons.org/meta/0668E1" style="width:20px; height:20px; margin-right: -4px;">
+           META ADS
+         </div>
+         <div class="f-stack-dot">•</div>
+         <div class="f-stack-item">
+           <span class="f-stack-icon" style="width:18px; height:18px; border-radius:50%;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" style="width:11px;"></span>
+           GA4
+         </div>
+         <div class="f-stack-dot">•</div>
+         <div class="f-stack-item">
+           <span class="f-stack-icon" style="width:18px; height:18px; border-radius:50%;"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" style="width:11px;"></span>
+           GTM
+         </div>
+       </div>
+    </div>
+
+    <div class="footer-bot reveal">
       <span class="footer-sig">Yusuf Tajwar</span>
       <span class="footer-copy">Digital Marketing · 2025</span>
     </div>
